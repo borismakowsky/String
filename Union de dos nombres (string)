@@ -1,0 +1,33 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <string>
+#define MAX 20
+
+using namespace std;
+
+
+
+void main()
+{
+	string nombre[MAX];
+	string apellido[MAX];
+	int i,n;
+	cout<<"Ingrese el numero de usuarios"<<endl;
+	cin>>n;
+	for(i=0;i<n;i++)
+	{
+		cin.ignore();
+		cout<<"Ingrese el apellido"<<endl;
+		getline(cin,apellido[i]);
+		cout<<"Ingrese el nombre"<<endl;
+		getline(cin,nombre[i]);
+	}
+	cout<<"LOS NOMBRES SON:"<<endl;
+	for(i=0;i<n;i++)
+	{
+		cout<<apellido[i] <<"\t"<<nombre[i]<<endl;
+	}
+
+	getch();
+}
